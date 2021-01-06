@@ -21,28 +21,32 @@
 title: Hibble Foods
 email: support@hibblefoods.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hibble Foods Cooperative.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "hibblefoods.com"
-github_username:  jekyll
-
+minimal_mistakes_skin: "dirt"
+logo: "/assets/images/logo.png"
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 plugins:
-  - jekyll-feed
   - jekyll-include-cache
+  - jekyll-feed
 
 defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
     values:
       layout: single
       comments: true
       related: true
+
+footer:
+  links:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/eat_hibble"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
