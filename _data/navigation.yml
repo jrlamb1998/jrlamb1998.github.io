@@ -1,9 +1,9 @@
 main:
   - title: "About Us"
-    url: www.hibblefoods.com
+    url: /about/
   - title: "Mission Statement"
-    url: www.hibblefoods.com
+    url: /mission/
   - title: "Philosophy"
-    url: www.hibblefoods.com
+    url: /philos/
   - title: "Shop"
-    url: www.hibblefoods.com
+    url: /shop/

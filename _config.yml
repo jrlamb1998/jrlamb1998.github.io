@@ -33,12 +33,11 @@ plugins:
   - jekyll-feed
 
 defaults:
-  # _posts
+  # _pages
   - scope:
       path: ""
     values:
       layout: single
-      comments: true
       related: true
 
 footer:
@@ -47,6 +46,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/eat_hibble"
 
+include: ["_pages"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
