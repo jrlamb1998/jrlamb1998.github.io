@@ -1,9 +1,9 @@
 main:
-  - title: "About Us"
+  - title: Our Story
     url: /about/
-  - title: "Mission Statement"
-    url: /mission/
-  - title: "Philosophy"
-    url: /philos/
-  - title: "Shop"
+  - title: Shop
     url: /shop/
+  - title: The Hibble Way
+    url: /way/
+  - title: Contact Us
+    url: /contact/
