@@ -9,12 +9,12 @@ Like many good ideas, Hibble started as a dinner conversation. Enviously eyeing 
 
 ![founders](/assets/images/ourstory/founders.png){: .circleimg}
 
-<figure class="align-left" style="width:40%;height:40%;">
+The early days of experimentation were full of mistakes and fun.
+
+<figure class="align-left" style="width:20%;height:20%;">
   <img src="/assets/images/ourstory/room412.jpg">
   <figcaption>Hibble began in Sophie's small but cozy dorm room.</figcaption>
 </figure> 
-
-The early days of experimentation were full of mistakes and fun.
 
 And now for a **massively large image**. It also has **no alignment**.
 
