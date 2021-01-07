@@ -7,7 +7,7 @@ layout: tag
 
 Like many good ideas, Hibble started as a dinner conversation. Enviously eyeing a nearby dog, cofounder Jack exclaimed, "I sure wish we could eat like that dog!". "There are many benefits", replied cofounder Sophie.
 
-![founders](/assets/images/ourstory/founders.png){: .align-center}
+![founders]({{ site.url }}{{ site.baseurl }}/assets/images/ourstory/founders.png){: .align-center}
 
 <figure class="align-left">
   <img src="/assets/images/ourstory/room412.jpg" style="width:40%;height:40%;">
