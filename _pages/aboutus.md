@@ -11,7 +11,7 @@ Like many good ideas, Hibble started as a dinner conversation. Enviously eyeing 
 
 The early days of experimentation were full of mistakes and fun.
 
-<figure class="align-left" style="width:20%;height:0%;">
+<figure class="align-left" style="width:30%;height:30%;">
   <img src="/assets/images/ourstory/room412.jpg">
   <figcaption>Hibble began in Sophie's small but cozy dorm room.</figcaption>
 </figure> 
