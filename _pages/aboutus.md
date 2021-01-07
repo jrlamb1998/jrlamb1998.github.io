@@ -11,14 +11,12 @@ Like many good ideas, Hibble started as a dinner conversation. Enviously eyeing 
 
 The early days of experimentation were full of mistakes and fun.
 
-<figure class="align-left" style="width:20%;height:20%;">
+<figure class="align-left" style="width:20%;height:0%;">
   <img src="/assets/images/ourstory/room412.jpg">
   <figcaption>Hibble began in Sophie's small but cozy dorm room.</figcaption>
 </figure> 
 
 And now for a **massively large image**. It also has **no alignment**.
-
-![no-alignment]({{ site.url }}{{ site.baseurl }}/assets/images/image-alignment-1200x4002.jpg)
 
 The image above, though 1200px wide, should not overflow the content area. It should remain contained with no visible disruption to the flow of content.
 
