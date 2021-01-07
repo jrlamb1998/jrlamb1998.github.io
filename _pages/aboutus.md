@@ -9,8 +9,8 @@ Like many good ideas, Hibble started as a dinner conversation. Enviously eyeing 
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/ourstory/founders.png){: .align-center}
 
-<figure class="align-left" style="width:40%;height:40%;">
-  <img src="/assets/images/ourstory/room412.jpg" alt="">
+<figure class="align-left">
+  <img src="/assets/images/ourstory/room412.jpg" style="width:40%;height:40%;">
   <figcaption>Hibble began in Sophie's small but cozy dorm room.</figcaption>
 </figure> 
 
