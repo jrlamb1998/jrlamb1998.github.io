@@ -44,8 +44,7 @@
 				// local variables for internal use
 				item_id					= 0,
 				item_id_namespace		= "SCI-",
-				sc_
-				= {},
+				sc_items				= {},
 				namespace				= space || "simpleCart",
 				selectorFunctions		= {},
 				eventFunctions			= {},
@@ -195,8 +194,7 @@
 
 					// otherwise add the item
 					} else {
-						sc_
-						[newItem.id()] = newItem;
+						sc_items[newItem.id()] = newItem;
 					}
 
 					// update the cart
@@ -218,28 +216,21 @@
 						x = 0,
 						result,
 						cb,
-						
-						;
+						items;
 
 					if (isFunction(array)) {
 						cb = array;
-						
-						 = sc_
-						;
+						items = sc_items;
 					} else if (isFunction(callback)) {
 						cb = callback;
-						
-						 = array;
+						items = array;
 					} else {
 						return;
 					}
 
-					for (next in 
-					) {
-						if (Object.prototype.hasOwnProperty.call(
-						  , next)) {
-							result = cb.call(simpleCart, 
-							[next], x, next);
+					for (next in items) {
+						if (Object.prototype.hasOwnProperty.call(items, next)) {
+							result = cb.call(simpleCart, items[next], x, next);
 							if (result === false) {
 								return;
 							}
@@ -249,17 +240,13 @@
 				},
 
 				find: function (id) {
-					var 
-					= [];
+					var items = [];
 
 					// return object for id if it exists
-					if (isObject(sc_
-					[id])) {
-						return sc_
-						[id];
+					if (isObject(sc_items[id])) {
+						return sc_items[id];
 					}
-					// search through 
-					with the given criteria
+					// search through items with the given criteria
 					if (isObject(id)) {
 						simpleCart.each(function (item) {
 							var match = true;
@@ -309,37 +296,29 @@
 
 							// add the item if it matches
 							if (match) {
-								
-								.push(item);
+								items.push(item);
 							}
 						});
-						return 
-						;
+						return items;
 					}
 
-					// if no criteria is given we return all 
-					
+					// if no criteria is given we return all items
 					if (isUndefined(id)) {
 
 						// use a new array so we don't give a reference to the
 						// cart's item array
 						simpleCart.each(function (item) {
-							
-							.push(item);
+							items.push(item);
 						});
-						return 
-						;
+						return items;
 					}
 
 					// return empty array as default
-					return 
-					;
+					return items;
 				},
 
-				// return all 
-				
-				
-				: function () {
+				// return all items
+				items: function () {
 					return this.find();
 				},
 
@@ -358,8 +337,7 @@
 				// empty the cart
 				empty: function () {
 					// remove each item individually so we see the remove events
-					var new
-					= {};
+					var newItems = {};
 					simpleCart.each(function (item) {
 						// send a param of true to make sure it doesn't
 						// update after every removal
@@ -367,13 +345,10 @@
 						// because we know it has been prevented 
 						// from being removed
 						if (item.remove(true) === false) {
-							new
-							[item.id()] = item
+							newItems[item.id()] = item
 						}
 					});
-					sc_
-					= new
-					;
+					sc_items = newItems;
 					simpleCart.update();
 				},
 
@@ -458,20 +433,14 @@
 				save: function () {
 					simpleCart.trigger('beforeSave');
 
-					var 
-					= {};
+					var items = {};
 
-					// save all the 
-					
+					// save all the items
 					simpleCart.each(function (item) {
-						
-						[item.id()] = simpleCart.extend(item.fields(), item.options());
+						items[item.id()] = simpleCart.extend(item.fields(), item.options());
 					});
 
-					localStorage.setItem(namespace + "_
-					", JSON.stringify(
-					  
-					));
+					localStorage.setItem(namespace + "_items", JSON.stringify(items));
 
 					simpleCart.trigger('afterSave');
 				},
@@ -479,15 +448,11 @@
 				load: function () {
 
 					// empty without the update
-					sc_
-					= {};
+					sc_items = {};
 
-					var 
-					= localStorage.getItem(namespace + "_
-					");
+					var items = localStorage.getItem(namespace + "_items");
 
-					if (!
-					) {
+					if (!items) {
 						return;
 					}
 					
@@ -496,9 +461,7 @@
 					// have a playing card pluckin the spokes now...
 					// soundin like a harley.
 					try {
-						simpleCart.each(JSON.parse(
-						  
-						), function (item) {
+						simpleCart.each(JSON.parse(items), function (item) {
 							simpleCart.add(item, true);
 						});
 					} catch (e){
@@ -658,6 +621,7 @@
 				// write out cart
 				writeCart: function (selector) {
 					var TABLE = settings.cartStyle.toLowerCase(),
+						isTable = TABLE === 'table',
 						TR = isTable ? "tr" : "div",
 						TH = isTable ? 'th' : 'div',
 						TD = isTable ? 'td' : 'div',
@@ -691,8 +655,7 @@
 						);
 					}
 
-					// cycle through the 
-					
+					// cycle through the items
 					simpleCart.each(function (item, y) {
 						simpleCart.createCartRow(item, y, TR, TD, cart_container);
 					});
@@ -746,8 +709,7 @@
 				// set the item id
 				item_id += 1;
 				_data.id = _data.id || item_id_namespace + item_id;
-				while (!isUndefined(sc_
-				[_data.id])) {
+				while (!isUndefined(sc_items[_data.id])) {
 					item_id += 1;
 					_data.id = item_id_namespace + item_id;
 				}
@@ -860,21 +822,18 @@
 					return this.increment(-parseInt(diff, 10));
 				},
 				remove: function (skipUpdate) {
-					var removeItemBool = simpleCart.trigger("beforeRemove", [sc_
-					[this.id()]]);
+					var removeItemBool = simpleCart.trigger("beforeRemove", [sc_items[this.id()]]);
 					if (removeItemBool === false ) {
 						return false;
 					}
-					delete sc_
-					[this.id()];
+					delete sc_items[this.id()];
 					if (!skipUpdate) { 
 						simpleCart.update();
 					}
 					return null;
 				},
 
-				// special fields for 
-				
+				// special fields for items
 				reservedFields: function () {
 					return ['quantity', 'id', 'item_number', 'price', 'name', 'shipping', 'tax', 'taxRate'];
 				},
@@ -994,8 +953,7 @@
 					}
 
 
-					// add all the 
-					to the form data
+					// add all the items to the form data
 					simpleCart.each(function (item,x) {
 						var counter = x+1,
 							item_options = item.options(),
@@ -1066,8 +1024,7 @@
 						method = opts.method === "GET" ? "GET" : "POST";
 
 
-					// add 
-					to data
+					// add items to data
 					simpleCart.each(function (item,x) {
 						var counter = x+1,
 							options_list = [],
@@ -1130,8 +1087,7 @@
 						method = opts.method === "GET" ? "GET" : "POST";
 
 
-					// add 
-					to data
+					// add items to data
 					simpleCart.each(function (item,x) {
 						var counter = x+1,
 							options_list = [];
@@ -1192,8 +1148,7 @@
 						method = opts.method === "GET" ? "GET" : "POST";
 
 
-					// add 
-					to data
+					// add items to data
 					simpleCart.each(function (item,x) {
 						var counter = x+1,
 							options_list = [],
@@ -1740,8 +1695,7 @@
 					, quantity: function () {
 						return simpleCart.quantity();
 					}
-					, 
-					: function (selector) {
+					, items: function (selector) {
 						simpleCart.writeCart(selector);
 					}
 					, tax: function () {

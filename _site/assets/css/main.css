@@ -1203,7 +1203,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   /* Hide the following elements on print ========================================================================== */
   .masthead, .toc, .page__share, .page__related, .pagination, .ads, .page__footer, .page__comments-form, .author__avatar, .author__content, .author__urls-wrapper, .nav__list, .sidebar, .adsbygoogle { display: none !important; height: 1px !important; } }
 .simplecart-total { margin-bottom: 20px; text-align: center; }
-@media (min-width: 800px) { .simplecart-total { text-align: center; } }
+@media (min-width: 800px) { .simplecart-total { text-align: right; } }
 .simplecart-total p { display: inline; }
 
 /* Forms
@@ -1438,6 +1438,32 @@ template { display: none; }
 .product-price { float: right; width: 30%; text-align: right; }
 .product-price p { margin-bottom: 0; }
 
+/* Forms
+-------------------------------------------------- */
+form { width: 50%; margin-left: auto; margin-right: auto; }
+
+input, select, textarea { width: 100%; margin-bottom: 20px; padding: 14px 16px; border: 1px solid #dcdcdc; border-radius: 2px; font-size: 16px; color: #12302e; background-color: #fff; }
+
+textarea, input[type='password'], input[type='url'], input[type='text'], input[type='search'], input[type='email'] { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+input[type='checkbox'], input[type='radio'] { width: auto; margin-right: 10px; }
+
+input:focus, textarea:focus { border-color: #1eaedb; outline: none; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+
+.input-large { padding: 15px; font-size: 24px; }
+
+select.input-large { height: 54px; padding-top: 12px; line-height: 54px; }
+
+.input-small { padding: 5px 10px; font-size: 12px; }
+
+::-moz-placeholder { color: #d8d8d8; opacity: 1; }
+
+::-webkit-input-placeholder { color: #d8d8d8; }
+
+input:focus::-webkit-input-placeholder, input:focus::-moz-placeholder, input:focus:-ms-input-placeholder, textarea:focus::-webkit-input-placeholder, textarea:focus::-moz-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+
+label { font-weight: 700; }
+
 /* Tables
 -------------------------------------------------- */
 table { width: 100%; margin-bottom: 20px; line-height: 2; border-collapse: collapse; border-spacing: 0; }
@@ -1472,38 +1498,3 @@ and also iPads specifically.
   td:nth-of-type(6):before { content: 'Qty'; }
   td:nth-of-type(7):before { content: ''; }
   td:nth-of-type(8):before { content: 'SubTotal'; } }
-/* Entries
--------------------------------------------------- */
-.entry { margin-bottom: 1em; }
-
-.entry.page { display: inline-block; width: 100%; margin: 0; }
-
-.single-post .entry { position: relative; margin-bottom: 40px; }
-
-.entry-title a { border: 0; color: #12302e; }
-
-.entry-content ol, .entry p, .entry-content p, .textwidget p, .entry-content ul, .entry ul, .entry ol, .entry-content .video-player, .quote-caption { margin-bottom: 2rem; line-height: 2; }
-
-.entry-content ol, .entry ol, .entry-content ul, .entry ul { margin-left: 40px; }
-
-.post-image.entry-image { margin-bottom: 40px; }
-
-.entry-content ol li, .entry ol li { list-style-type: decimal; }
-
-.entry-content ul li, .entry ul li { list-style-type: disc; }
-
-.entry-content ol ol, .entry ol ol, .entry-content ul ul, .entry ul ul { margin-bottom: 0; }
-
-.entry-content ul.list-unstyled, .entry-content ol.list-unstyled { margin-left: 20px; }
-
-.entry-content ul.list-unstyled > li, .entry-content ol.list-unstyled > li { list-style: none; }
-
-.entry-meta { font-size: 18px; }
-.entry-meta span { display: block; }
-
-.entry-meta, .comment-meta { letter-spacing: .1em; text-transform: uppercase; }
-
-p.intro { display: block; font-family: Martel, serif; font-size: 20px; font-weight: 400; line-height: 2; }
-@media only screen and (min-width: 1024px) { p.intro { font-size: 25px; } }
-
-hr, .clear-line { width: 100%; margin: 0 0 40px; padding: 40px 0 0; border: 0; border-bottom: 1px solid #eee; overflow: hidden; }
