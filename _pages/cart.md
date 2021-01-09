@@ -1,0 +1,5 @@
+---
+layout: cart
+permalink: /cart/
+---
+

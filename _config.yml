@@ -26,19 +26,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "hibblefoods.com"
 minimal_mistakes_skin: "dirt"
 logo: "/assets/images/logo.png"
+
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 plugins:
   - jekyll-include-cache
   - jekyll-feed
 
-defaults:
-  # _pages
-  - scope:
-      path: ""
-    values:
-      layout: single
-      related: true
+
+#defaults:
+#  # _pages
+#  - scope:
+#      path: “_pages”
+#    values:
+#      layout: splash
 
 footer:
   links:
@@ -47,6 +48,10 @@ footer:
       url: "https://instagram.com/eat_hibble"
 
 include: ["_pages"]
+
+collections:
+  products:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

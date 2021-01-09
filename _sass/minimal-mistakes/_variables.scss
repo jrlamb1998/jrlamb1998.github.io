@@ -152,8 +152,8 @@ $max-width: $x-large !default;
    ========================================================================== */
 
 $right-sidebar-width-narrow: 20px !default;
-$right-sidebar-width: 20px !default;
-$right-sidebar-width-wide: 20px !default;
+$right-sidebar-width: 30px !default;
+$right-sidebar-width-wide: 40px !default;
 
 /*
    Other
@@ -167,3 +167,21 @@ $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
+
+$primary-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$secondary-font-family: 'Roboto Condensed', sans-serif;
+$tertiary-font-family: Martel, serif;
+
+/* Jekyll Cart Colors
+-------------------------------------------------- */
+$primary-color: #1eaedb;
+$primary-color-hover: #0fa0ce;
+
+$secondary-color: #12302e;
+
+$button-text-color: #fff;
+$button-background-color: #33c3f0;
+
+$button-text-color-hover: #fff;
+$button-background-color-hover: #1eaedb;
+

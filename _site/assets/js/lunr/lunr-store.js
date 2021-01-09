@@ -4,4 +4,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/jekyll/update/2021/01/05/welcome-to-jekyll.html",
         "teaser": null
+      },{
+        "title": "Sacha the Deer",
+        "excerpt":"Daniel is a good man. Oink Oink Oink  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/danny.html",
+        "teaser": null
+      },{
+        "title": "Buhol",
+        "excerpt":"Daniel is a good man. Oink Oink Oink   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/manny.html",
+        "teaser": null
       }]
