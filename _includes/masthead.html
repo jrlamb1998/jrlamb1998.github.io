@@ -21,9 +21,7 @@
             </li>
             {% endif %}
           {%- endfor -%}
-        <nav class="nav-secondary mobile-show" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Secondary navigation">
-      </ul>
-    </nav>
+        </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
