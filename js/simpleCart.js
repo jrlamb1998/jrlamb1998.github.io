@@ -94,6 +94,7 @@
 					cartStyle				: "table",
 					cartColumns			: [
 						{ attr: "name", label: "Name" },
+						{ attr: "details", label: "Details" },
 						{ attr: "price", label: "Price", view: 'currency' },
 						{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Qty" },

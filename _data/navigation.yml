@@ -7,3 +7,6 @@ main:
     url: /way/
   - title: FAQ
     url: /faq/
+  - title: Cart
+    url: /cart/
+
