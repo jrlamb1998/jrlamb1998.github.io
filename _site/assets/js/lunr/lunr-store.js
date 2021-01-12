@@ -5,15 +5,27 @@ var store = [{
         "url": "http://localhost:4000/jekyll/update/2021/01/05/welcome-to-jekyll.html",
         "teaser": null
       },{
-        "title": "Sacha the Deer",
-        "excerpt":"Daniel is a good man. Oink Oink Oink  ","categories": [],
+        "title": "Camp Hibble Shirt",
+        "excerpt":"Vintage camp t-shirt.  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/products/danny.html",
+        "url": "http://localhost:4000/products/camp_hibble_shirt.html",
         "teaser": null
       },{
-        "title": "Buhol",
-        "excerpt":"Daniel is a good man. Oink Oink Oink   ","categories": [],
+        "title": "Hibble Meal (500 cal)",
+        "excerpt":"We cannot ship edible products. All deliveries must be direct. We can only deliver to Bay Area counties.  ","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/products/manny.html",
+        "url": "http://localhost:4000/products/hibbag_meal.html",
+        "teaser": null
+      },{
+        "title": "Hibble Snack (100 cal)",
+        "excerpt":"We cannot ship edible products. All deliveries must be direct. We can only deliver to Bay Area counties.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/hibbag_snack.html",
+        "teaser": null
+      },{
+        "title": "Hibble Logo Sticker",
+        "excerpt":"Stickers  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/sticker.html",
         "teaser": null
       }]

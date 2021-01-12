@@ -91,7 +91,14 @@
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
-
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 <!-- end custom head snippets -->
 
   </head>
@@ -141,7 +148,7 @@
             </li>
             <li class="masthead__menu-item">
               
-            <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> (<span class="simpleCart_quantity"></span>)</a>
+            <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> (<span class="total-count"></span>)</a>
             </ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -165,17 +172,17 @@
           <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
 
         		<div class="style">
-        			<a href="/products/danny.html">
-        				<img src="/assets/images/danny.jpg" itemprop="image">
+        			<a href="/products/camp_hibble_shirt.html">
+        				<img src="/assets/images/products/merch/camp_hibble_shirt/black.jpg" itemprop="image">
         			</a>
         		</div>
 
             <div class="product-details">
               <div class="product-name">
-			          <h4><a href="/products/danny.html">Sacha the Deer</a></h4>
+			          <h4><a href="/products/camp_hibble_shirt.html">Camp Hibble Shirt</a></h4>
               </div>
               <div class="product-price">
-							  <p>&#x24;4.00</p>
+							  <p>&#x24;10</p>
               </div>
 						</div>
 
@@ -184,14 +191,52 @@
           <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
 
         		<div class="style">
-        			<a href="/products/manny.html">
-        				<img src="/assets/images/danny.jpg" itemprop="image">
+        			<a href="/products/hibbag_meal.html">
+        				<img src="/assets/images/bowl.jpg" itemprop="image">
         			</a>
         		</div>
 
             <div class="product-details">
               <div class="product-name">
-			          <h4><a href="/products/manny.html">Buhol</a></h4>
+			          <h4><a href="/products/hibbag_meal.html">Hibble Meal (500 cal)</a></h4>
+              </div>
+              <div class="product-price">
+							  <p>&#x24;12.00</p>
+              </div>
+						</div>
+
+          </section>
+        
+          <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
+
+        		<div class="style">
+        			<a href="/products/hibbag_snack.html">
+        				<img src="/assets/images/bowl.jpg" itemprop="image">
+        			</a>
+        		</div>
+
+            <div class="product-details">
+              <div class="product-name">
+			          <h4><a href="/products/hibbag_snack.html">Hibble Snack (100 cal)</a></h4>
+              </div>
+              <div class="product-price">
+							  <p>&#x24;8.00</p>
+              </div>
+						</div>
+
+          </section>
+        
+          <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
+
+        		<div class="style">
+        			<a href="/products/sticker.html">
+        				<img src="/assets/images/logo.png" itemprop="image">
+        			</a>
+        		</div>
+
+            <div class="product-details">
+              <div class="product-name">
+			          <h4><a href="/products/sticker.html">Hibble Logo Sticker</a></h4>
               </div>
               <div class="product-price">
 							  <p>&#x24;4.00</p>
@@ -230,7 +275,7 @@
 </div>
 
 <div class="page__footer-copyright"> Contact Us at support@hibblefoods.com</div>
-<a href="https://www.reddit.com/submit?url=/products/danny.html&title=Sacha the Deer" class="btn btn--reddit" title="Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+<a href="https://www.reddit.com/submit?url=/products/camp_hibble_shirt.html&title=Camp Hibble Shirt" class="btn btn--reddit" title="Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
 
 <div class="page__footer-copyright">&copy; 2021 Hibble Foods. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
@@ -249,8 +294,14 @@
 
 
     
+
+    <script src="/js/shopcart.js"></script>
+  <!--
     <script src="/js/jquery-2.2.4.min.js"></script>
+    
+        
     <script src="/js/simpleCart.js"></script>
+    
 
     
       <script async src="/js/style-picker.js"></script>
@@ -258,6 +309,6 @@
     
 
     
-
+--->
   </body>
 </html>

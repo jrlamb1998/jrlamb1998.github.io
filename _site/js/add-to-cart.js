@@ -1,4 +1,4 @@
-jQuery('#item_add').click(function() {
+jQuery('.add-to-cart-btn').click(function() {
 
   $('html, body').animate({
     scrollTop: 0

@@ -215,3 +215,10 @@ input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button {
   display: none;
 }
+
+/* Custom */
+
+.show-cart li {
+  display: flex;
+}
+

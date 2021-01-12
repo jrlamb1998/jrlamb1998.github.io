@@ -2,43 +2,58 @@
 layout: default
 ---
 
+<!---
+We have 3 types of products: clothing, food, accessory
+Food has a dropdown flavor selector menu. Clothing has a clickable color option viewer.
+--->
+
 <div class="site-inner">
   <div class="wrap">
-    <div class="content-sidebar-wrap">
-
-      <main class="content single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
-
-        <section class="product-image">
-          <div class="styles">
-            {% for style in page.styles %}
-          		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none"{% endunless %}>
-        				<img src="{{ style.image_path }}" itemprop="image">
-          		</div>
-          	{% endfor %}
-          </div>
+    
+    <div class="shelf-item">
+    <div class="single-product">
+      
+      <section class="product-image">
+        <img src="{{ page.featured_image_path }}" class="item_image" />
         </section>
-
-        <section class="product-details">
-          <h1 class="entry-title item_name" itemprop="name">{{ page.title }}</h1>
-          <p class="item_price">{{ page.price }}</p>
+        
+          <section>
+          <h1 class="entry-title item_name">{{ page.title }}</h1>
+          <p class="item_price" >{{ page.price }}</p>
           {{ content }}
+          </section>
+          
+          </div>
+          
+          <div class="product-details">
 
+          {% if page.product_type == "food" %} 
+          <p class="margin-bottom-0">Flavor:</p>
+          <select class="item_flavor">
+           {% for flavor in page.flavors %}
+             <option value="{{ flavor }}"> {{ flavor }} </option>
+           {% endfor %}
+          </select>
+          {% endif %}
+          
+          {% if page.product_type == "clothing" %}
         	<div class="style-picker">
             <p class="margin-bottom-0">Color:</p>
             {% for style in page.styles %}
-              <div id="product-{{ forloop.index }}"{% if forloop.first %} class="item_color"{% endif %} style="background-color: {{ style.color }}"><span class="display-none">{{ style.name }}</span></div>
+              <div id="item-color"{% if forloop.first %} class="item_style"{% endif %} style="background-color: {{ style.color }}"></div>
             {% endfor %}
         	</div>
-
+  
           <p class="margin-bottom-0">Size:</p>
           <select class="item_size">
             {% for size in page.sizes %}
               <option value="{{ size }}"> {{ size }} </option>
             {% endfor %}
           </select>
-
+      {% endif %}
+          
           <p class="margin-bottom-0">Quantity:</p>
-          <select class="item_Quantity">
+          <select class="item_quantity">
             <option value="1"> 1 </option>
             <option value="2"> 2 </option>
             <option value="3"> 3 </option>
@@ -48,12 +63,9 @@ layout: default
             <option value="7"> 7 </option>
             <option value="8"> 8 </option>
           </select>
-
-          <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
-        </section>
-
-      </main>
-
+        
+      </div>
+      <button class="add-to-cart-btn button"> Add to Cart </button>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
               {% if link.title == "Cart" %}
-            <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> (<span class="simpleCart_quantity"></span>)</a>
+            <a href="{{ link.url }}" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> (<span class="total-count"></span>)</a>
             {% else %}
               <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
