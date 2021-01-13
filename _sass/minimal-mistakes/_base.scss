@@ -112,6 +112,7 @@ blockquote {
   padding-right: 1em;
   font-style: italic;
   border-left: 0.25em solid $primary-color;
+  float:left;
 
   cite {
     font-style: italic;
@@ -214,6 +215,8 @@ figure {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
+  vertical-align: middle;
+  display:inline-block;
 
   img,
   iframe,
@@ -248,6 +251,7 @@ figure {
   &.third {
     > a,
     > img {
+      vertical-align: middle;
       @include breakpoint($small) {
         width: calc(33.3333% - 0.5em);
       }
