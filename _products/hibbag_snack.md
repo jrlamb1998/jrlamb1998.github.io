@@ -4,9 +4,11 @@ description: Bag o' hibble
 product_type: food
 price: '8.00'
 flavors:
-  - Calcutta calamity
-  - Tijuana terror
+  - Naughty Nick
+  - Sexy Sabrina
   - Bodacious Boka
+  - Daddy Dennis
+  - Dakota
 featured_image_path: /assets/images/bowl.jpg
 facebook_image_path:
 layout: product
