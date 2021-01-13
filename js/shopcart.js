@@ -76,7 +76,7 @@ var shoppingCart = (function() {
   // Remove all items from cart
   obj.removeItemFromCartAll = function(name, color, flavor, size) {
     for(var item in cart) {
-      if(cart[item].name === name && cart[item].flavor === flavor && cart[item].size === size && cart[item].color === color) {
+      if(cart[item].name === name && (cart[item].flavor === flavor || flavor.length === 0 ) && (cart[item].size === size || size.length === 0) && (cart[item].color === color || color.length === 0)) {
         cart.splice(item, 1);
         break;
       }
@@ -229,6 +229,31 @@ $('.clear-cart-btn').click(function() {
 });
 
 
+var removeButtons = document.getElementsByClassName('remove-item-btn');
+for (var i = 0; i < removeButtons.length; i++) {
+  var button = removeButtons[i];
+  button.addEventListener('click', removeItem);
+}
+// $('.remove-item-btn').click(removeItem);
+
+function removeItem(event) {
+  var buttonClicked = event.target;
+  var cartRow = buttonClicked.parentElement.parentElement;
+  var name = cartRow.getElementsByClassName('item-nam')[0].innerText;
+  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\\s{2}");
+  var flavor = ""; color = ""; size = "";
+  if (details.length == 1) {
+    flavor = details[0];
+  } else if (details.length == 2) {
+    color = details[0]; size = details[1];
+  } 
+  shoppingCart.removeItemFromCartAll(name, color, flavor, size);
+  cartRow.remove();
+  updateCartTotal();
+  displayCart();
+}
+
+/*
 var removeItemButtons = document.getElementsByClassName('remove-item-btn')
 for (var i = 0; i < removeItemButtons.length; i++) {
   var button = removeItemButtons[i];
@@ -244,13 +269,13 @@ for (var i = 0; i < removeItemButtons.length; i++) {
   } else {
     color = ""; size = ""; flavor = "";
   }
-  console.log(name, color, flavor, size)
-  shoppingCart.removeItemFromCart(name, color, flavor, size);
+  shoppingCart.removeItemFromCartAll(name, color, flavor, size);
   cartRow.remove();
-  updateCartTotal();
+  //updateCartTotal();
+  displayCart();
 })
 }
-
+*/
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
