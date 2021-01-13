@@ -2,7 +2,7 @@
 layout: splash
 author_profile: true
 nav_exclude: false
-excerpt: "Have you ever wanted to eat like a dog?"
+excerpt: "<br/>Have you ever wanted to eat like a dog?<br/>"
 header:
   overlay_image: /assets/images/home.png
   overlay_filter: 0.4

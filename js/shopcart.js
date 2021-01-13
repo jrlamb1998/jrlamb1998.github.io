@@ -188,14 +188,16 @@ function displayCart() {
     <th>Details</th>
     <th>Price</th>
     <th>Quantity</th>
+    <th></th>
     </tr>`;
     for(var i in cartArray) {
-      output += "<tr>"
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>" + cartArray[i].color + " " + cartArray[i].size 
-      + " " + cartArray[i].flavor + "</td>" 
-      + "<td>" + "$" + cartArray[i].price + "</td>"
-      + "<td>" + cartArray[i].count + "</td>"
+      output += "<tr class='cart-row'>"
+      + "<td class='item-nam'>" + cartArray[i].name + "</td>" 
+      + "<td class='item-details'>" + cartArray[i].color + "  " + cartArray[i].size 
+      + "  " + cartArray[i].flavor + "</td>" 
+      + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
+      + "<td class='item-quant'>" + cartArray[i].count + "</td>"
+      + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "</tr>";
       /*
       + `<div class="cart-quantity cart-column">`
@@ -225,6 +227,48 @@ $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
   displayCart();
 });
+
+
+var removeItemButtons = document.getElementsByClassName('remove-item-btn')
+for (var i = 0; i < removeItemButtons.length; i++) {
+  var button = removeItemButtons[i];
+  button.addEventListener('click', function(event) {
+  var buttonClicked = event.target;
+  var cartRow = buttonClicked.parentElement.parentElement;
+  var name = cartRow.getElementsByClassName('item-nam')[0].innerText;
+  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\\s{2}");
+  if (details.length == 1) {
+    flavor = details[0]; color = ""; size = "";
+  } else if (details.length == 2) {
+    flavor = ""; color = details[0]; size = details[1];
+  } else {
+    color = ""; size = ""; flavor = "";
+  }
+  console.log(name, color, flavor, size)
+  shoppingCart.removeItemFromCart(name, color, flavor, size);
+  cartRow.remove();
+  updateCartTotal();
+})
+}
+
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    var total = 0;
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i];
+        var priceElement = cartRow.getElementsByClassName('item-pri')[0];
+        var quantityElement = cartRow.getElementsByClassName('item-quant')[0];
+        var price = parseFloat(priceElement.innerText.replace('$', ''));
+        var quantity = quantityElement.value;
+        total = total + (price * quantity);
+    }
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('total-price')[0].innerText = total;
+}
+
+
 
 
 /*
