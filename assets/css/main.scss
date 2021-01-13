@@ -4,21 +4,6 @@
 
 @charset "utf-8";
 
-.circleimg {
-   border-radius:50%;
-   width:30%;
-   height:30%;
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
-}
-
-.centeredimg {
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
-}
-
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; 

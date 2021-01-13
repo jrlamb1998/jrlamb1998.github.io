@@ -8,7 +8,7 @@ header:
   overlay_filter: 0.4
   actions:
     - label: "Order Now"
-      url: "https://www.youtube.com/watch?v=dXpTGy1xFMc&ab_channel=sandwichmanila"
+      url: "/shop/"
 feature_row:
   - image_path: assets/images/danny.jpg
     title: "Product 1"

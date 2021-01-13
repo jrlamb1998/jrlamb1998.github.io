@@ -186,6 +186,28 @@ body:hover .visually-hidden button {
   }
 }
 
+/* Custom */
+
+.circleimg {
+   border-radius:50%;
+   width:32%;
+   height:30%;
+}
+
+.centeredimg {
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+}
+
+.align-left-custom {
+  @include breakpoint($small) {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+
 /*
    Icons
    ========================================================================== */

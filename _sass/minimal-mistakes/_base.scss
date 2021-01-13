@@ -283,6 +283,16 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+.figcaption {
+  /* margin-bottom: 0.5em; */
+  margin-top: 0px;;
+  color: $muted-text-color;
+  font-family: $caption-font-family;
+  font-size: $type-size-7;
+}
+
+
+
 /*
    Navigation lists
    ========================================================================== */
