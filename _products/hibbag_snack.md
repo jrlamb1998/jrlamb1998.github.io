@@ -7,7 +7,7 @@ flavors:
   - Naughty Nick
   - Sexy Sabrina
   - Bodacious Boka
-  - Daddy Dennis
+  - Juicy Julia
   - Dakota
 featured_image_path: /assets/images/bowl.jpg
 facebook_image_path:
