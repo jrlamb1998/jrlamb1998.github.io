@@ -225,7 +225,6 @@ displayCart();
 
 $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
-  updateCartTotal();
   displayCart();
 });
 
