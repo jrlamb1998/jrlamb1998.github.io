@@ -225,6 +225,7 @@ displayCart();
 
 $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
+  updateCartTotal();
   displayCart();
 });
 
@@ -234,7 +235,6 @@ for (var i = 0; i < removeButtons.length; i++) {
   var button = removeButtons[i];
   button.addEventListener('click', removeItem);
 }
-// $('.remove-item-btn').click(removeItem);
 
 function removeItem(event) {
   var buttonClicked = event.target;
