@@ -143,6 +143,18 @@ var shoppingCart = (function() {
 // Triggers / Events
 // ***************************************** 
 
+/* Shop color selector */
+var colorBtns = document.getElementsByClassName('change-color-btn');
+for (var i = 0; i < colorBtns.length; i++) {
+  btn = colorBtns[i];
+  btn.addEventListener('click', function(event) {
+    var path = event.target.getAttribute("itempropimg");
+    var colname = event.target.getAttribute("itempropcol");
+    document.getElementsByClassName('item_image')[0].src = path;
+    document.getElementsByClassName('item_color')[0].setAttribute("itemprop", colname);
+  });
+}
+
 var addToCartButtons = document.getElementsByClassName('add-to-cart-btn')
 for (var i = 0; i < addToCartButtons.length; i++) {
   var button = addToCartButtons[i]
@@ -255,6 +267,13 @@ function removeItem(event) {
   document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
   displayCart();
 }
+
+function sizeSelector() {
+  var s = document.getElementsByClassName('item_size')[0];
+  var p = s.options[s.selectedIndex].getAttribute("itemprop");
+  document.getElementsByClassName('item_price')[0].innerText = "$" + p;
+}
+
 
 /*
 var removeItemButtons = document.getElementsByClassName('remove-item-btn')

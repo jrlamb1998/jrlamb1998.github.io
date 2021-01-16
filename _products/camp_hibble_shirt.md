@@ -3,10 +3,11 @@ title: Camp Hibble Shirt
 description: Camp t-shirt
 product_type: clothing
 price: '10'
+pricebysize: false
 sizes:
-  - Small
-  - Medium
-  - Large
+  - name: Small
+  - name: Medium
+  - name: Large
 colors:
   - name: Black
     color: '#000000'

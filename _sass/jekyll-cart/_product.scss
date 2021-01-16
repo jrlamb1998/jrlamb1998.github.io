@@ -59,12 +59,12 @@
     margin-bottom: 40px;
 
     &:nth-child(3n+4) {
-      margin-left: 10;
+      margin-left: 0;
     }
 
     .product-details {
       float: none;
-      width: 90%;
+      width: 100%;
     }
 
   }

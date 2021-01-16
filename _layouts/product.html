@@ -19,49 +19,42 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
         
           <section>
           <h1 class="entry-title item_name">{{ page.title }}</h1>
-          <p class="item_price" >&#x24;{{ page.price }}</p>
+          <p class="item_price" style="font-size=1.5em;">&#x24;{{page.price}}</p>
+          
           {{ content }}
           
           <div class="product-details" style="margin-left:0px;">
-          {% if page.product_type == "clothing" %}
+            
+          {% if page.colors %}
         	<div class="style-picker">
             Color: <span style="display:inline-block; width: 5px;"></span>
             {% for c in page.colors %}
               <button style="background-color: {{ c.color }}" class="change-color-btn" itempropimg="{{c.image_path}}" itempropcol="{{c.name}}"></button>
               {% endfor %}
               <span class="item_color" itemprop="{{page.colors[0].name}}"></span>
-                <script>
-                var colorBtns = document.getElementsByClassName('change-color-btn');
-                for (var i = 0; i < colorBtns.length; i++) {
-                  btn = colorBtns[i];
-                  btn.addEventListener('click', function(event) {
-                  var path = event.target.getAttribute("itempropimg");
-                  var colname = event.target.getAttribute("itempropcol");
-                  document.getElementsByClassName('item_image')[0].src = path;
-                  document.getElementsByClassName('item_color')[0].setAttribute("itemprop", colname);
-                });
-                }
-                </script> 
-            <br /><br />
+            <br />
             </div>
-            Size:
-          <select class="item_size">
+      {% endif %}
+      
+      {% if page.sizes %}
+       Size:
+          <select class="item_size" {% if page.pricebysize %} onchange="sizeSelector()" {% endif %}>
             {% for size in page.sizes %}
-              <option value="{{ size }}"> {{ size }} </option>
+              <option value="{{ size.name }}" {% if page.pricebysize %} itemprop="{{size.size_price}}" {% endif %}> {{ size.name }} </option>
             {% endfor %}
           </select>
-          <br /><br />
+          <br />
       {% endif %}
           
           
-          {% if page.product_type == "food" %} 
+          {% if page.flavors %} 
           Flavor:
           <select class="item_flavor">
            {% for flavor in page.flavors %}
              <option value="{{ flavor }}"> {{ flavor }} </option>
            {% endfor %}
           </select>
-          <br /><br />
+          <br />
           {% endif %}
           
           Quantity:

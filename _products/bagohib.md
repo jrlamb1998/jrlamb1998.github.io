@@ -1,8 +1,14 @@
 ---
-title: Hibble Snack (100 cal)
-description: Bag o' hibble
+title: Bag o' Hibble
+description: Our signature product
 product_type: food
-price: '8'
+pricebysize: true
+price: "5"
+sizes:
+  - name: Snack (100 calorie)
+    size_price: '5'
+  - name: Meal (500 calorie)
+    size_price: '10'
 flavors:
   - Naughty Nick
   - Sexy Sabrina
