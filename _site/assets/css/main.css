@@ -271,7 +271,7 @@ li ul, li ol { margin-top: 0.5em; }
 
 /* Media and embeds ========================================================================== */
 /* Figures and images */
-figure { display: -webkit-box; display: flex; -webkit-box-pack: justify; justify-content: space-between; -webkit-box-align: start; align-items: flex-start; flex-wrap: wrap; margin: 2em 0; vertical-align: middle; display: inline-block; }
+figure { display: -webkit-box; display: flex; -webkit-box-pack: justify; justify-content: space-between; -webkit-box-align: start; align-items: flex-start; flex-wrap: wrap; margin: 2em 0; }
 figure img, figure iframe, figure .fluid-width-video-wrapper { margin-bottom: 1em; }
 figure img { width: 100%; border-radius: 4px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 figure > a { display: block; }
@@ -1355,7 +1355,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 
 /* Grid
 -------------------------------------------------- */
-@media (min-width: 800px) { .grid { display: -ms-flexbox; display: flex; flex: 0 1 auto; flex-direction: row; vertical-align: middle; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+@media (min-width: 800px) { .grid { display: -ms-flexbox; display: flex; flex: 0 1 auto; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .grid > * { align-self: stretch; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; }
   .grid > *:first-child { margin-left: 0; }
   .one-fourth, .one-half, .one-third, .three-fourths, .two-fourths, .two-thirds { flex: 0 0 auto; float: left; margin-left: 4%; }
