@@ -221,7 +221,8 @@ function displayCart() {
       + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "</tr>";
   }
-  var buttonbar = "<button class='clear-cart-btn'> Clear Cart </button>";
+  var buttonbar = `<button class='clear-cart-btn' style='background-color:red;'> Clear Cart </button>
+  <a href='/checkout/'><button class='order-now-btn'> Order Now </button></a>`;
   var total = 'Total price: $<span class="total-price"></span>'
   $('.cart-items').html(output);
   $('.cart-buttons').html(buttonbar);
@@ -242,13 +243,12 @@ function displayCart() {
 }
 
 displayCart();
-/*
+
 $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
   document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
   displayCart();
-}); */
-
+});
 
 function removeItem(event) {
   var buttonClicked = event.target;
