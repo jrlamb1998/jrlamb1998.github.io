@@ -1349,7 +1349,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .product .product-price p { margin-bottom: 0; }
 
 .cart-total { margin-bottom: 20px; text-align: center; }
-@media (min-width: 800px) { .cart-total { text-align: right; } }
+@media (min-width: 800px) { .cart-total { text-align: left; } }
 .cart-total p { display: inline; }
 
 /* Grid

@@ -231,17 +231,23 @@ function displayCart() {
   for (var i = 0; i < removeButtons.length; i++) {
     var button = removeButtons[i];
     button.addEventListener('click', removeItem);
-    
   }
+  var clearButton = document.getElementsByClassName('clear-cart-btn')[0];
+  clearButton.addEventListener("click", function(event) {
+    shoppingCart.clearCart();
+    document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
+    displayCart();
+  })
 }
 }
 
 displayCart();
-
+/*
 $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
+  document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
   displayCart();
-});
+}); */
 
 
 function removeItem(event) {
