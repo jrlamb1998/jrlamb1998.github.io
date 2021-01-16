@@ -1329,6 +1329,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .masthead, .toc, .page__share, .page__related, .pagination, .ads, .page__footer, .page__comments-form, .author__avatar, .author__content, .author__urls-wrapper, .nav__list, .sidebar, .adsbygoogle { display: none !important; height: 1px !important; } }
 .single-product { width: 100%; }
 @media (min-width: 800px) { .single-product { display: flex; } }
+.single-product .product-image { margin-right: 20px; }
 @media (min-width: 800px) { .single-product .product-image { flex-basis: 500px; } }
 @media (min-width: 800px) { .single-product .product-details { margin-left: 40px; } }
 .single-product .product-details .item_price:before { content: '$'; }
@@ -1341,20 +1342,20 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .product .content { width: 100%; }
 @media (min-width: 800px) { .product .content { display: flex; } }
 .product .entry { margin-bottom: 40px; }
-.product .entry:nth-child(3n+4) { margin-left: 0; }
-.product .entry .product-details { float: none; width: 100%; }
+.product .entry:nth-child(3n+4) { margin-left: 10; }
+.product .entry .product-details { float: none; width: 90%; }
 .product .product-name { float: left; width: 70%; margin-top: 7px; }
 .product .product-name h4 { margin-bottom: 0; font-size: 18px; }
 .product .product-price { float: right; width: 30%; text-align: right; }
 .product .product-price p { margin-bottom: 0; }
 
 .cart-total { margin-bottom: 20px; text-align: center; }
-@media (min-width: 800px) { .cart-total { text-align: right; } }
+@media (min-width: 800px) { .cart-total { text-align: left; } }
 .cart-total p { display: inline; }
 
 /* Grid
 -------------------------------------------------- */
-@media (min-width: 800px) { .grid { display: -ms-flexbox; display: flex; flex: 0 1 auto; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+@media (min-width: 800px) { .grid { display: -ms-flexbox; display: flex; flex: 0 1 auto; flex-direction: row; vertical-align: middle; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .grid > * { align-self: stretch; -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; }
   .grid > *:first-child { margin-left: 0; }
   .one-fourth, .one-half, .one-third, .three-fourths, .two-fourths, .two-thirds { flex: 0 0 auto; float: left; margin-left: 4%; }
@@ -1364,6 +1365,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .one-fourth { width: 22%; }
   .three-fourths { width: 74%; }
   .first { margin-left: 0; clear: both; } }
+/* For shop */
+.vertAlinedImg { vertical-align: middle; }
+
 .site-container { max-width: 1440px; height: 100%; margin: 0 auto; }
 
 .wrap { margin: 0 auto; padding: 0 5%; }

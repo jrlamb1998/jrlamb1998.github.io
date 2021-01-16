@@ -153,21 +153,26 @@ function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement
     
-    var name = shopItem.getElementsByClassName('item_name')[0].innerText
-    var price = shopItem.getElementsByClassName('item_price')[0].innerText
-    price = parseFloat(price);
-    var flavor = shopItem.getElementsByClassName('item_flavor')
-    var color = "";
+    var name = shopItem.getElementsByClassName('item_name')[0].innerText;
+    var price = shopItem.getElementsByClassName('item_price')[0].innerText;
+    price = parseFloat(price.substring(1));
+    var flavor = shopItem.getElementsByClassName('item_flavor');
     if (flavor.length > 0) {
       flavor = flavor[0].value
     } else {
       flavor = "";
     }
-    var size = shopItem.getElementsByClassName('item_size')
+    var size = shopItem.getElementsByClassName('item_size');
     if (size.length > 0) {
       size = size[0].value
     } else {
       size = "";
+    }
+    var color = shopItem.getElementsByClassName('item_color');
+    if (color.length > 0) {
+      color = color[0].getAttribute("itemprop");
+    } else {
+      color = "";
     }
     var count = shopItem.getElementsByClassName('item_quantity')[0].value
     count = parseInt(count);
@@ -193,8 +198,7 @@ function displayCart() {
     for(var i in cartArray) {
       output += "<tr class='cart-row'>"
       + "<td class='item-nam'>" + cartArray[i].name + "</td>" 
-      + "<td class='item-details'>" + cartArray[i].color + "  " + cartArray[i].size 
-      + "  " + cartArray[i].flavor + "</td>" 
+      + "<td class='item-details'>" + cartArray[i].size + '\xa0\xa0' + cartArray[i].color + '\xa0\xa0' + cartArray[i].flavor + "</td>" 
       + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
       + "<td class='item-quant'>" + cartArray[i].count + "</td>"
       + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
@@ -218,6 +222,12 @@ function displayCart() {
   $('.cart-buttons').html(buttonbar);
   $('.cart-total').html(total);
   $('.total-price').html(shoppingCart.totalCart());
+  var removeButtons = document.getElementsByClassName('remove-item-btn');
+  for (var i = 0; i < removeButtons.length; i++) {
+    var button = removeButtons[i];
+    button.addEventListener('click', removeItem);
+    
+  }
 }
 }
 
@@ -229,17 +239,11 @@ $('.clear-cart-btn').click(function() {
 });
 
 
-var removeButtons = document.getElementsByClassName('remove-item-btn');
-for (var i = 0; i < removeButtons.length; i++) {
-  var button = removeButtons[i];
-  button.addEventListener('click', removeItem);
-}
-
 function removeItem(event) {
   var buttonClicked = event.target;
   var cartRow = buttonClicked.parentElement.parentElement;
   var name = cartRow.getElementsByClassName('item-nam')[0].innerText;
-  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\\s{2}");
+  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\xa0\xa0");
   var flavor = ""; color = ""; size = "";
   if (details.length == 1) {
     flavor = details[0];
@@ -248,7 +252,7 @@ function removeItem(event) {
   } 
   shoppingCart.removeItemFromCartAll(name, color, flavor, size);
   cartRow.remove();
-  updateCartTotal();
+  document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
   displayCart();
 }
 
@@ -276,24 +280,13 @@ for (var i = 0; i < removeItemButtons.length; i++) {
 }
 */
 
-function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row');
-    var total = 0;
-    for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('item-pri')[0];
-        var quantityElement = cartRow.getElementsByClassName('item-quant')[0];
-        var price = parseFloat(priceElement.innerText.replace('$', ''));
-        var quantity = quantityElement.value;
-        total = total + (price * quantity);
-    }
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName('total-price')[0].innerText = total;
-}
-
-
-
+/*
+jQuery('.style-picker').click(function() {
+  var target = $(this).attr('id');
+  console.log("butt");
+  $(this).addClass('item-color').siblings().removeClass('item-color');
+  $('#' + target).show().siblings('div').hide();
+});
 
 /*
 function addItemToCart(name, price, flavor, color, size, count) {

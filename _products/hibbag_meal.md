@@ -2,7 +2,7 @@
 title: Hibble Meal (500 cal)
 description: Bag o' hibble
 product_type: food
-price: '12.00'
+price: '12'
 flavors:
   - Naughty Nick
   - Sexy Sabrina

@@ -8,11 +8,11 @@ layout: default
 
       <main class="content grid">
         {% for product in site.products %}
-          <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
+          <section class="entry one-third styles" itemscope style="white-space: nowrap;">
 
-        		<div class="style">
+        		<div class="style" style="vertical-align: middle;">
         			<a href="{{ product.url }}">
-        				<img src="{{ product.featured_image_path }}" itemprop="image">
+        				<img src="{{ product.featured_image_path }}" style="vertical-align: middle;">
         			</a>
         		</div>
 

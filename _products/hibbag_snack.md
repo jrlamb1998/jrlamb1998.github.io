@@ -2,7 +2,7 @@
 title: Hibble Snack (100 cal)
 description: Bag o' hibble
 product_type: food
-price: '8.00'
+price: '8'
 flavors:
   - Naughty Nick
   - Sexy Sabrina

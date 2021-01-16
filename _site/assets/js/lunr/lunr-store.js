@@ -5,6 +5,12 @@ var store = [{
         "url": "http://localhost:4000/jekyll/update/2021/01/05/welcome-to-jekyll.html",
         "teaser": null
       },{
+        "title": "Bean Mosaic",
+        "excerpt":"By default we will make a dog design but email us if you want a custom design.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/bean_mosaic_small.html",
+        "teaser": null
+      },{
         "title": "Camp Hibble Shirt",
         "excerpt":"Vintage camp t-shirt.  ","categories": [],
         "tags": [],
@@ -21,6 +27,12 @@ var store = [{
         "excerpt":"We cannot ship edible products. All deliveries must be direct. We can only deliver to Bay Area counties.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/products/hibbag_snack.html",
+        "teaser": null
+      },{
+        "title": "Hibble Song",
+        "excerpt":"Custom Jack music  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/products/hibble_song.html",
         "teaser": null
       },{
         "title": "Hibble Logo Sticker",
