@@ -147,18 +147,19 @@ var shoppingCart = (function() {
 var colorBtns = document.getElementsByClassName('change-color-btn');
 for (var i = 0; i < colorBtns.length; i++) {
   btn = colorBtns[i];
-  btn.addEventListener('click', function(event) {
-    var path = event.target.getAttribute("itempropimg");
-    var colname = event.target.getAttribute("itempropcol");
-    document.getElementsByClassName('item_image')[0].src = path;
-    document.getElementsByClassName('item_color')[0].setAttribute("itemprop", colname);
-  });
+  btn.addEventListener('click', changeImgColor);
+}
+function changeImgColor(event) {
+  var path = event.target.getAttribute("itempropimg");
+  var colname = event.target.getAttribute("itempropcol");
+  document.getElementsByClassName('item_image')[0].src = path;
+  document.getElementsByClassName('item_color')[0].setAttribute("itemprop", colname);
 }
 
 var addToCartButtons = document.getElementsByClassName('add-to-cart-btn')
 for (var i = 0; i < addToCartButtons.length; i++) {
-  var button = addToCartButtons[i]
-  button.addEventListener('click', addToCartClicked)
+  var button = addToCartButtons[i];
+  button.addEventListener('click', addToCartClicked);
 }
 
 function addToCartClicked(event) {
@@ -202,7 +203,9 @@ function displayCart() {
     <table>
     <tr>
     <th>Name</th>
-    <th>Details</th>
+    <th>Size</th>
+    <th>Color</th>
+    <th>Flavor</th>
     <th>Price</th>
     <th>Quantity</th>
     <th></th>
@@ -210,23 +213,13 @@ function displayCart() {
     for(var i in cartArray) {
       output += "<tr class='cart-row'>"
       + "<td class='item-nam'>" + cartArray[i].name + "</td>" 
-      + "<td class='item-details'>" + cartArray[i].size + '\xa0\xa0' + cartArray[i].color + '\xa0\xa0' + cartArray[i].flavor + "</td>" 
+      + "<td class='item-siz'>" + cartArray[i].size + "</td>" 
+      + "<td class='item-col'>" + cartArray[i].color + "</td>"
+      + "<td class='item-fla'>" + cartArray[i].flavor + "</td>"
       + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
       + "<td class='item-quant'>" + cartArray[i].count + "</td>"
       + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "</tr>";
-      /*
-      + `<div class="cart-quantity cart-column">`
-      + `<input class="cart-quantity-input" type="number">`
-      + `<button class="btn btn-danger" type="button">REMOVE</button>`
-      + `</div>`
-      
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      + " = " 
-      + "<td>" + cartArray[i].total + "</td>" */
   }
   var buttonbar = "<button class='clear-cart-btn'> Clear Cart </button>";
   var total = 'Total price: $<span class="total-price"></span>'
@@ -255,13 +248,9 @@ function removeItem(event) {
   var buttonClicked = event.target;
   var cartRow = buttonClicked.parentElement.parentElement;
   var name = cartRow.getElementsByClassName('item-nam')[0].innerText;
-  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\xa0\xa0");
-  var flavor = ""; color = ""; size = "";
-  if (details.length == 1) {
-    flavor = details[0];
-  } else if (details.length == 2) {
-    color = details[0]; size = details[1];
-  } 
+  var size = cartRow.getElementsByClassName('item-siz')[0].innerText;
+  var flavor = cartRow.getElementsByClassName('item-fla')[0].innerText;
+  var color = cartRow.getElementsByClassName('item-col')[0].innerText;
   shoppingCart.removeItemFromCartAll(name, color, flavor, size);
   cartRow.remove();
   document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
