@@ -1,6 +1,9 @@
 
-const SPREADSHEET_ID = "1ZLCDH8KoV2gj2xD61Dk5cKvBPKjp80Dct9mhyn81VAA";
-const CLIENT_ID = "807516949991-kcuuspd9ks7fi71fo1stjapqteplk5g4.apps.googleusercontent.com";
-const CLIENT_SECRET = "3Sf42Af_DK_w1mtjFuvx-qgt";
-const API_KEY = "AIzaSyAlWZlH7MMG3rm2gAYGe1yHc1Br1VIgM9o";
-const SCOPE = "https://www.googleleapis.com/auth/spreadsheets";
+const WEBAPP = "https://script.google.com/macros/s/AKfycbypnJmGJMFvlbVR_0mQ72g0sv9FbI9KSN8LFWLtkxL7r4a_aCseyVVv/exec";
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbypnJmGJMFvlbVR_0mQ72g0sv9FbI9KSN8LFWLtkxL7r4a_aCseyVVv/exec';
+const form = document.forms['submit-to-google-sheet'];
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)}).then(response => console.log('Success!', response)).catch(error => console.error('Error!', error.message));
+});

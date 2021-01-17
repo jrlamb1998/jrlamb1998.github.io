@@ -5,10 +5,9 @@ sitemap: false
 layout: default
 ---
 
-<div class="cart-items"></div>
-<div class="cart-total"></div>
-
-<form method="post" action="/">
+<div style="padding:20px;">
+<form method="post" name="submit-to-google-sheet">
+  
   <label>First Name</label>
   <input type="text" name="First Name">
 
@@ -16,7 +15,7 @@ layout: default
   <input type="text" name="Last Name">
 
   <label>Email Address</label>
-  <input type="text" name="Email">
+  <input type="text" name="Email" required>
 
   <label>Mailing Address</label>
   <input type="text" name="Street" placeholder="Street">
@@ -26,7 +25,10 @@ layout: default
 
   <input type="hidden" name="_to" value="">
   <input type="text" name="_gotcha" style="display: none;">
-
-  <input type="submit" value="Submit">
+  
+  <div class="cart-total" style="font-weight:bold; font-size:1.2em;"></div>
+  <input type="submit" value="Submit Order">
 </form>
+</div>
+
 

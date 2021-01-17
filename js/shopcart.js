@@ -242,12 +242,14 @@ function displayCart() {
       document.getElementsByClassName("cart-buttons")[0].remove();
     }
   }
-  var clearButton = document.getElementsByClassName('clear-cart-btn')[0];
-  clearButton.addEventListener("click", function(event) {
+  var clearButton = document.getElementsByClassName('clear-cart-btn');
+  if(clearButton.length > 0) {
+    clearButton[0].addEventListener("click", function(event) {
     shoppingCart.clearCart();
     document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
     displayCart();
-  })
+  });
+  }
   }
 }
 
@@ -278,119 +280,3 @@ function sizeSelector() {
   document.getElementsByClassName('item_price')[0].innerText = "$" + p;
 }
 
-
-/*
-var removeItemButtons = document.getElementsByClassName('remove-item-btn')
-for (var i = 0; i < removeItemButtons.length; i++) {
-  var button = removeItemButtons[i];
-  button.addEventListener('click', function(event) {
-  var buttonClicked = event.target;
-  var cartRow = buttonClicked.parentElement.parentElement;
-  var name = cartRow.getElementsByClassName('item-nam')[0].innerText;
-  var details = cartRow.getElementsByClassName('item-details')[0].innerText.split("\\s{2}");
-  if (details.length == 1) {
-    flavor = details[0]; color = ""; size = "";
-  } else if (details.length == 2) {
-    flavor = ""; color = details[0]; size = details[1];
-  } else {
-    color = ""; size = ""; flavor = "";
-  }
-  shoppingCart.removeItemFromCartAll(name, color, flavor, size);
-  cartRow.remove();
-  //updateCartTotal();
-  displayCart();
-})
-}
-*/
-
-/*
-jQuery('.style-picker').click(function() {
-  var target = $(this).attr('id');
-  console.log("butt");
-  $(this).addClass('item-color').siblings().removeClass('item-color');
-  $('#' + target).show().siblings('div').hide();
-});
-
-/*
-function addItemToCart(name, price, flavor, color, size, count) {
-    var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
-            return
-        }
-    }
-    var cartRowContents = `
-        <div class="cart-item cart-column">
-            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
-            <span class="cart-item-title">${title}</span>
-        </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">REMOVE</button>
-        </div>`
-    cartRow.innerHTML = cartRowContents
-    cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
-    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
-}
-
-/* 
-
-function displayCart() {
-  var cartArray = shoppingCart.listCart();
-  var output = "";
-  for(var i in cartArray) {
-    output += "<tr>"
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      + " = " 
-      + "<td>" + cartArray[i].total + "</td>" 
-      +  "</tr>";
-  }
-  $('.show-cart').html(output);
-  $('.total-cart').html(shoppingCart.totalCart());
-  $('.total-count').html(shoppingCart.totalCount());
-}
-
-// Delete item button
-
-$('.show-cart').on("click", ".delete-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.removeItemFromCartAll(name);
-  displayCart();
-})
-
-
-// -1
-$('.show-cart').on("click", ".minus-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.removeItemFromCart(name);
-  displayCart();
-})
-// +1
-$('.show-cart').on("click", ".plus-item", function(event) {
-  var name = $(this).data('name')
-  shoppingCart.addItemToCart(name);
-  displayCart();
-})
-
-// Item count input
-$('.show-cart').on("change", ".item-count", function(event) {
-   var name = $(this).data('name');
-   
-   var count = Number($(this).val());
-  shoppingCart.setCountForItem(name, price, flavor, color, size, count);
-  displayCart();
-});
-
-displayCart();
-*/
