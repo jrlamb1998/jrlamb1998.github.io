@@ -29,7 +29,7 @@ Like many ideas, Hibble started as a dinner conversation. Sophie and Jack were o
 
 > We're so glad you're doing this <cite> Our friends </cite>
 
-Over the next few months, the idea grew and grew and grew, until Jack and Sophie couldn’t stand it anymore. They desperately wanted a delicious, vegan food to satisfy all of their dietary needs. One fateful night, they ordered Hibblizer 1.0 -- a $16 sausage extruder. With a bowl each of beans and rice, the first ever Hibble was born!
+Over the next few months, the idea grew and grew, until Jack and Sophie couldn’t stand it anymore. They desperately wanted a delicious, vegan food to satisfy all of their dietary needs. One fateful night, they ordered Hibblizer 1.0 -- a $16 sausage extruder. With a bowl each of beans and rice, the first ever Hibble was born!
 
 Hibble was a joy from the first bite. It quickly became a sensation in Jack and Sophie’s dorm, where they spent many evenings perfecting the recipe. Although the COVID-19 pandemic delayed development, the Hibble dream lived on. 
 

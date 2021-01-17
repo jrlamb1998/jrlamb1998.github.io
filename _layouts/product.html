@@ -58,6 +58,12 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
           <br />
           {% endif %}
           
+          {% if page.design %} 
+          Custom Design: 
+          <input type="text" class="item_design" value="{{page.design}}"></input>
+          <br />
+          {% endif %}
+          
           Quantity: 
           <select class="item_quantity">
             <option value="1"> 1 </option>

@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Bean Mosaic",
-        "excerpt":"By default we will make a dog design but email us if you want a custom design.  ","categories": [],
+        "excerpt":"By default we will make a dog design.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/products/bean_mosaic_small.html",
         "teaser": null

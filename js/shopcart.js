@@ -171,9 +171,14 @@ function addToCartClicked(event) {
     price = parseFloat(price.substring(1));
     var flavor = shopItem.getElementsByClassName('item_flavor');
     if (flavor.length > 0) {
-      flavor = flavor[0].value
+      flavor = flavor[0].value;
     } else {
-      flavor = "";
+      flavor = shopItem.getElementsByClassName('item_design');
+      if(flavor.length > 0) {
+        flavor = flavor[0].value.toLowerCase();
+      } else {
+        flavor = "";
+      }
     }
     var size = shopItem.getElementsByClassName('item_size');
     if (size.length > 0) {
@@ -206,7 +211,7 @@ function displayCart() {
     <th>Name</th>
     <th>Size</th>
     <th>Color</th>
-    <th>Flavor</th>
+    <th>Flavor/Design</th>
     <th>Price</th>
     <th>Quantity</th>
     <th></th>
