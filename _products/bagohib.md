@@ -20,4 +20,4 @@ facebook_image_path:
 layout: product
 ---
 
-## We cannot ship edible products. All deliveries must be direct. We can only deliver to Bay Area counties.
+#### We cannot ship edible products. All deliveries must be direct. We can only deliver to Bay Area counties.

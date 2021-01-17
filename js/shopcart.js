@@ -196,6 +196,7 @@ function addToCartClicked(event) {
 function displayCart() {
   $('.total-count').html(shoppingCart.totalCount());
   if (shoppingCart.totalCount() === 0) {
+    document.getElementsByClassName("cart-buttons")[0].remove();
     $('.cart-items').html(`<div class="initial-content">Looks like your cart is empty</div>`);
   } else {
     var cartArray = shoppingCart.listCart();
@@ -232,6 +233,9 @@ function displayCart() {
   for (var i = 0; i < removeButtons.length; i++) {
     var button = removeButtons[i];
     button.addEventListener('click', removeItem);
+    if (shoppingCart.totalCount() === 0) {
+      document.getElementsByClassName("cart-buttons")[0].remove();
+    }
   }
   var clearButton = document.getElementsByClassName('clear-cart-btn')[0];
   clearButton.addEventListener("click", function(event) {
@@ -239,7 +243,7 @@ function displayCart() {
     document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
     displayCart();
   })
-}
+  }
 }
 
 displayCart();
@@ -248,7 +252,7 @@ $('.clear-cart-btn').click(function() {
   shoppingCart.clearCart();
   document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
   displayCart();
-});
+}); 
 
 function removeItem(event) {
   var buttonClicked = event.target;

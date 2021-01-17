@@ -19,9 +19,10 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
         
           <section>
           <h1 class="entry-title item_name">{{ page.title }}</h1>
-          <p class="item_price" style="font-size=1.5em;">&#x24;{{page.price}}</p>
+          <span class="item_price" style="font-size:1.2em;">&#x24;{{page.price}}</span>
           
           {{ content }}
+          <br />
           
           <div class="product-details" style="margin-left:0px;">
             
@@ -37,7 +38,7 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
       {% endif %}
       
       {% if page.sizes %}
-       Size:
+       Size: 
           <select class="item_size" {% if page.pricebysize %} onchange="sizeSelector()" {% endif %}>
             {% for size in page.sizes %}
               <option value="{{ size.name }}" {% if page.pricebysize %} itemprop="{{size.size_price}}" {% endif %}> {{ size.name }} </option>
@@ -48,7 +49,7 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
           
           
           {% if page.flavors %} 
-          Flavor:
+          Flavor: 
           <select class="item_flavor">
            {% for flavor in page.flavors %}
              <option value="{{ flavor }}"> {{ flavor }} </option>
@@ -57,7 +58,7 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
           <br />
           {% endif %}
           
-          Quantity:
+          Quantity: 
           <select class="item_quantity">
             <option value="1"> 1 </option>
             <option value="2"> 2 </option>
