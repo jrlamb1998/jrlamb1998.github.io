@@ -62,8 +62,8 @@
 
 .email-form input[type="email"] {
   padding: 0.5rem;
-  min-width: 200px;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 100%;
   flex: 1 1 250px; /* allow resizing */
   border: 1px solid #ccc;
   border-radius: 4px;
