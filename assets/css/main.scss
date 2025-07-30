@@ -21,6 +21,7 @@
 
 .centered-gif {
   display: flex;
+  margin-bottom: 2rem;
   justify-content: center;
 }
 
@@ -38,7 +39,7 @@
 
 .email-box {
   background-color: #fff9c4;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
   border-radius: 8px;
   margin-top: 2rem;
   text-align: center;
@@ -65,7 +66,7 @@
   max-width: 300px;
   flex: 1 1 auto; /* allow resizing */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 .email-form button {
@@ -79,8 +80,9 @@
 
 .label-text {
   font-family: 'Chewy', sans-serif;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   color: red;
   white-space: nowrap; /* prevents breaking lines */
   line-height: 1;
+  text-align:center;
 }

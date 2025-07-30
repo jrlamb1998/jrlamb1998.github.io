@@ -19,10 +19,10 @@ header:
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-<div class="email-box">
-  <p class="label-text"> Hungry for Hibble?</p> 
-  <p class="label-text">Join our exclusive mailing list for updates and offers. </p>
 
+<div class="email-box">
+<p class="label-text">Hungry for Hibble?</p> 
+    <p class="label-text">Join our exclusive mailing list for updates and offers.</p>
   <form class="email-form"
         id="subscribe-form"
         action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd0I4tlBMiEkcDwHCoPOX6OvEC7kxALJMJ9KhPqvfNJb0tHzA/formResponse"
