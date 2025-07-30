@@ -62,9 +62,9 @@
 
 .email-form input[type="email"] {
   padding: 0.5rem;
-  min-width: 300px;
+  min-width: 0;
   max-width: 100%;
-  flex: 1 1 250px; /* allow resizing */
+  flex: 1 1 auto;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -76,6 +76,8 @@
   border-radius: 4px;
   cursor: pointer;
   white-space: nowrap;
+  flex: 0 1 20%;
+  max-width:100%;
 }
 
 .label-text {
