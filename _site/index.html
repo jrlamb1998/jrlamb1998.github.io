@@ -103,6 +103,11 @@
 <meta name="theme-color" content="#ffffff">
 <!-- end custom head snippets -->
 
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="layout--splash">
@@ -214,100 +219,28 @@
     
 
     <section class="page__content" itemprop="text">
-      <p>Bow wow</p>
+      <p><span class="big-red">Big Things Coming…</span></p>
 
-<div class="feature__wrapper">
-
-  
-
+<div class="centered-gif">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHZnbG9qcG5xbHF0NXdpOXloaTNpNnV4MWVlNWdmMXUyd2g1dmlzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jRmcKkyhOY43Uy8PDc/giphy.gif" alt="Hibbilizing" />
 </div>
 
-<div class="feature__wrapper">
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/danny.jpg" alt="" />
-            
-          </div>
-        
+<div class="email-box">
+  <p class="label-text"> Hungry for Hibble?</p> 
+  <p class="label-text">Join our exclusive mailing list for updates and offers. </p>
 
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Product 1</h2>
-          
+  <form class="email-form" id="subscribe-form" action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd0I4tlBMiEkcDwHCoPOX6OvEC7kxALJMJ9KhPqvfNJb0tHzA/formResponse" method="POST" target="hidden_iframe" onsubmit="document.getElementById('thank-you').style.display='block';">
+    
+    <input type="email" name="entry.543153860" placeholder="mrhibble@hibblefoods.com" required="" />
+    <button type="submit">Subscribe</button>
+  </form>
 
-          
-            <div class="archive__item-excerpt">
-              <p>This is Daniel.</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/goblet.jpg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Placeholder 2</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>This is some sample content that goes here with <strong>Markdown</strong> formatting.</p>
-
-            </div>
-          
-
-          
-            <p><a href="/#test-link" class="btn btn--primary">Read More</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/assets/images/brocdick.jpg" alt="" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Placeholder 3</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>This is some sample content that goes here with <strong>Markdown</strong> formatting.</p>
-
-            </div>
-          
-
-          
-        </div>
-      </div>
-    </div>
-  
-
+  <p id="thank-you" class="label-text" style="display:none; color: green;">
+    Thanks for subscribing!
+  </p>
 </div>
-
 
     </section>
   </article>
@@ -342,7 +275,7 @@
 <a href="https://www.reddit.com/submit?url=/products/bagohib.html&title=Bag o' Hibble" class="btn btn--reddit" title="Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
 -->
 
-<div class="page__footer-copyright">&copy; 2021 Hibble Foods. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 Hibble Foods. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -363,13 +296,5 @@
     
     
 
-  <!--
-    <script src="/js/jquery-2.2.4.min.js"></script>
-    
-        
-    <script src="/js/simpleCart.js"></script>
-
-    
---->
   </body>
 </html>

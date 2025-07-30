@@ -12,6 +12,11 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -44,15 +49,5 @@
       <script async src="/js/order.js"></script>
     {% endif %}
 
-  <!--
-    <script src="/js/jquery-2.2.4.min.js"></script>
-    
-        
-    <script src="/js/simpleCart.js"></script>
-
-    {% if page.url contains '/cart/' %}
-      <script async src="/js/checkout.js"></script>
-    {% endif %}
---->
   </body>
 </html>

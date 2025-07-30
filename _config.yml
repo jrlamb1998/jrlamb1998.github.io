@@ -45,7 +45,7 @@ footer:
   links:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/eat_hibble"
+      url: "https://instagram.com/hibblefoods"
 
 include: ["_pages"]
 

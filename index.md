@@ -9,23 +9,32 @@ header:
   actions:
     - label: "Order Now"
       url: "/shop/"
-feature_row:
-  - image_path: assets/images/danny.jpg
-    title: "Product 1"
-    excerpt: "This is Daniel."
-  - image_path: /assets/images/goblet.jpg
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/brocdick.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
 ---
 
-Bow wow
+<span class="big-red">Big Things Coming...</span>
 
-{% include feature_row id="intro" type="center" %}
+<div class="centered-gif">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHZnbG9qcG5xbHF0NXdpOXloaTNpNnV4MWVlNWdmMXUyd2g1dmlzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jRmcKkyhOY43Uy8PDc/giphy.gif" alt="Hibbilizing">
+</div>
 
-{% include feature_row %}
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<div class="email-box">
+  <p class="label-text"> Hungry for Hibble?</p> 
+  <p class="label-text">Join our exclusive mailing list for updates and offers. </p>
+
+  <form class="email-form"
+        id="subscribe-form"
+        action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd0I4tlBMiEkcDwHCoPOX6OvEC7kxALJMJ9KhPqvfNJb0tHzA/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="document.getElementById('thank-you').style.display='block';">
+    
+    <input type="email" name="entry.543153860" placeholder="mrhibble@hibblefoods.com" required />
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <p id="thank-you" class="label-text" style="display:none; color: green;">
+    Thanks for subscribing!
+  </p>
+</div>

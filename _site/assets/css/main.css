@@ -1403,3 +1403,20 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 @import "jekyll-cart/forms";
 @import "jekyll-cart/forms";
 @import "jekyll-cart/tables”; */
+.big-red { font-size: 2.5rem; color: red; font-weight: bold; font-family: "Chewy", sans-serif; text-align: center; display: block; /* margin: 2rem 0; */ }
+
+.centered-gif { display: flex; justify-content: center; }
+
+.centered-gif img { max-height: 500px; width: auto; }
+
+/* adjusts gif for mobile */
+@media (max-width: 75%) { .centered-gif img { max-height: 200px; } }
+.email-box { background-color: #fff9c4; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; text-align: center; width: 100%; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+
+.email-form { display: flex; justify-content: center; align-items: center; gap: 0.5rem; flex-wrap: nowrap; margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+.email-form input[type="email"] { padding: 0.5rem; min-width: 200px; max-width: 300px; flex: 1 1 auto; /* allow resizing */ border: 1px solid #ccc; border-radius: 4px; }
+
+.email-form button { padding: 0.5rem 1rem; background-color: #fdd835; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap; }
+
+.label-text { font-family: 'Chewy', sans-serif; font-size: 2rem !important; color: red; white-space: nowrap; /* prevents breaking lines */ line-height: 1; }
