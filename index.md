@@ -11,7 +11,7 @@ header:
       url: "/shop/"
 ---
 
-<span class="big-red">Big Things Coming...</span>
+<span class="big-title">Big Things Coming...</span>
 
 <div class="centered-gif">
   <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHZnbG9qcG5xbHF0NXdpOXloaTNpNnV4MWVlNWdmMXUyd2g1dmlzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jRmcKkyhOY43Uy8PDc/giphy.gif" alt="Hibbilizing">
@@ -28,7 +28,10 @@ header:
         action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd0I4tlBMiEkcDwHCoPOX6OvEC7kxALJMJ9KhPqvfNJb0tHzA/formResponse"
         method="POST"
         target="hidden_iframe"
-        onsubmit="document.getElementById('thank-you').style.display='block';">
+        onsubmit="setTimeout(function() {
+        document.getElementById('thank-you').style.display = 'block';
+        document.getElementById('subscribe-form').reset();
+      }, 100);">
     
     <input type="email" name="entry.543153860" placeholder="mrhibble@hibblefoods.com" required />
     <button type="submit">Subscribe</button>

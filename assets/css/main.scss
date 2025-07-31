@@ -9,9 +9,9 @@
 @import "minimal-mistakes"; 
 @import "jekyll-cart"; 
 
-.big-red {
+.big-title {
   font-size: 2.5rem;
-  color: red;
+  color: #2E6F40;
   font-weight: bold;
   font-family: "Chewy", sans-serif;
   text-align: center;
@@ -38,7 +38,7 @@
 }
 
 .email-box {
-  background-color: #fff9c4;
+  background-color: #f7e2c7;
   padding: 1rem 1.25rem;
   border-radius: 8px;
   margin-top: 2rem;
@@ -71,7 +71,7 @@
 
 .email-form button {
   padding: 0.5rem 1rem;
-  background-color: #fdd835;
+  background-color: #578e87;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -83,14 +83,22 @@
 .label-text {
   font-family: 'Chewy', sans-serif;
   font-size: 1.25rem !important;
-  color: red;
+  color: #2E6F40;
   white-space: normal; /* prevents breaking lines */
   line-height: 1;
   text-align:center;
 }
 
+.hiring-form {
+   background-color: #f7e2c7;
+    width: 75%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 .hiring-form label {
-  font-family: 'Chewy', sans-serif;
+  font-family: Arial, sans-serif;
+  color:  black;
 }
 
 .hiring-form fieldset {
@@ -103,6 +111,7 @@
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  max-width: 100%;
 }
 
 .hiring-form fieldset label {
@@ -117,6 +126,17 @@
 .hiring-form fieldset label input[type="radio"] {
   margin-right: 0.4rem;
   vertical-align: middle;
+}
+
+.hiring-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #578e87;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 label[for="dog"] {
