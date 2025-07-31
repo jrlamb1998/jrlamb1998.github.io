@@ -206,28 +206,29 @@ function displayCart() {
   } else {
     var cartArray = shoppingCart.listCart();
     var output = `
+    <div class="cart-table-wrapper">
     <table class="cart-table">
     <thead>
     <th></th>
     <th>Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
     <th>Size</th>
     <th>Color</th>
     <th>Flavor/Design</th>
-    <th>Price</th>
-    <th>Quantity</th>
     </tr>`;
     for(var i in cartArray) {
       output += "<tr class='cart-row'>"
       + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "<td class='item-nam'>" + cartArray[i].name + "</td>" 
+      + "<td class='item-quant'>" + cartArray[i].count + "</td>"
+      + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
       + "<td class='item-siz'>" + cartArray[i].size + "</td>" 
       + "<td class='item-col'>" + cartArray[i].color + "</td>"
       + "<td class='item-fla'>" + cartArray[i].flavor + "</td>"
-      + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
-      + "<td class='item-quant'>" + cartArray[i].count + "</td>"
       + "</tr>";
   }
-  output += `</tbody> </table>`
+  output += `</tbody> </table></div>`
   var buttonbar = ``;
   var total = 'Total price: $<span class="total-price"></span>'
   $('.cart-items').html(output);

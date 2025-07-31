@@ -248,6 +248,10 @@ label:not([for="dog"]) {
   }
 }
 
+.cart-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 .cart-table {
   width: 100%;
