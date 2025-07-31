@@ -247,3 +247,18 @@ label:not([for="dog"]) {
     flex-direction: column;
   }
 }
+
+
+.cart-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align:center;
+}
+
+.cart-table th, .cart-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+  white-space: nowrap;
+}

@@ -206,15 +206,15 @@ function displayCart() {
   } else {
     var cartArray = shoppingCart.listCart();
     var output = `
-    <table>
-    <tr>
+    <table class="cart-table">
+    <thead>
+    <th></th>
     <th>Name</th>
     <th>Size</th>
     <th>Color</th>
     <th>Flavor/Design</th>
     <th>Price</th>
     <th>Quantity</th>
-    <th></th>
     </tr>`;
     for(var i in cartArray) {
       output += "<tr class='cart-row'>"
@@ -227,6 +227,7 @@ function displayCart() {
       + "<td class='item-quant'>" + cartArray[i].count + "</td>"
       + "</tr>";
   }
+  output += `</tbody> </table>`
   var buttonbar = ``;
   var total = 'Total price: $<span class="total-price"></span>'
   $('.cart-items').html(output);
