@@ -4,7 +4,7 @@ const WEBAPP = "https://script.google.com/macros/s/AKfycbypnJmGJMFvlbVR_0mQ72g0s
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwaTC764aHGKCBZDk6t5uBJrwhk5NWyMT4IINLz4QO5ro-jnS5kvg6u79lAwXUrb_QE/exec';
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (shoppingCart.totalCount() === 0) {
+  if (window.shoppingCart && shoppingCart.totalCount() === 0) {
     const checkoutContent = document.getElementById("form-container");
     if (checkoutContent) checkoutContent.remove();
   }
