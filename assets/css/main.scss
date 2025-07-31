@@ -149,3 +149,101 @@ label:not([for="dog"]) {
   display: inline-block;
   margin-right: 1rem; 
 }
+
+
+/* order page */
+
+
+/* Form inputs */
+.order-form input[type="text"],
+.order-form input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  background-color:white;
+  margin-bottom: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.order-form input[type="text"]:focus,
+.order-form input[type="email"]:focus {
+  outline: none;
+  border-color: #2a9d8f; /* Teal-ish accent */
+  box-shadow: 0 0 6px #2a9d8faa;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #264653; /* Navy blue */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #1d3557;
+}
+
+/* Status messages */
+.status-message {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.status-message .loading {
+  color:  red;
+}
+
+.status-message .success {
+  color: green;
+ }
+
+.status-message .error {
+  color: red;
+}
+
+
+.checkout-container {
+  display: flex;
+  gap: 2rem;
+  width: 90%;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  flex: 3 1 100%;  /* bigger: takes about 60% of width */
+  min-width: 20%;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.cart-container {
+  flex: 1 1 35%; /* smaller: takes about 35% of width */
+  min-width: 200px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+}

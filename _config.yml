@@ -50,6 +50,9 @@ footer:
 include: ["_pages"]
 
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   products:
     output: true
 

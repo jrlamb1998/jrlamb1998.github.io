@@ -1,5 +1,0 @@
----
-layout: cart
-permalink: /cart/
----
-

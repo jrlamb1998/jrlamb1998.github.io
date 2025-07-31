@@ -202,7 +202,7 @@ function displayCart() {
   $('.total-count').html(shoppingCart.totalCount());
   if (shoppingCart.totalCount() === 0) {
     document.getElementsByClassName("cart-buttons")[0].remove();
-    $('.cart-items').html(`<div class="initial-content">Looks like your cart is empty</div>`);
+    $('.cart-items').html(`<div p="label-text">Looks like your cart is empty :( </p>`);
   } else {
     var cartArray = shoppingCart.listCart();
     var output = `
@@ -227,8 +227,7 @@ function displayCart() {
       + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "</tr>";
   }
-  var buttonbar = `<button class='clear-cart-btn' style='background-color:red;'> Clear Cart </button>
-  <a href='/checkout/'><button class='order-now-btn'> Order Now </button></a>`;
+  var buttonbar = ``;
   var total = 'Total price: $<span class="total-price"></span>'
   $('.cart-items').html(output);
   $('.cart-buttons').html(buttonbar);
@@ -271,6 +270,10 @@ function removeItem(event) {
   shoppingCart.removeItemFromCartAll(name, color, flavor, size);
   cartRow.remove();
   document.getElementsByClassName('total-price')[0].innerText = shoppingCart.totalCart();
+  if (shoppingCart.totalCount() === 0) {
+    const checkout = document.getElementById("form-container");
+    if (checkout) checkout.remove();
+  }
   displayCart();
 }
 
