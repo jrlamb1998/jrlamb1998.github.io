@@ -218,13 +218,13 @@ function displayCart() {
     </tr>`;
     for(var i in cartArray) {
       output += "<tr class='cart-row'>"
+      + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "<td class='item-nam'>" + cartArray[i].name + "</td>" 
       + "<td class='item-siz'>" + cartArray[i].size + "</td>" 
       + "<td class='item-col'>" + cartArray[i].color + "</td>"
       + "<td class='item-fla'>" + cartArray[i].flavor + "</td>"
       + "<td class='item-pri'>" + "$" + cartArray[i].price + "</td>"
       + "<td class='item-quant'>" + cartArray[i].count + "</td>"
-      + `<td><button class="btn remove-item-btn">REMOVE</button></td>`
       + "</tr>";
   }
   var buttonbar = ``;

@@ -49,5 +49,22 @@ Any additional comments or requests?
   </div>
 </div>
 
+<script>
+  // Add this script at the bottom
+  function tryRemoveCheckout(retries = 10) {
+    if (window.shoppingCart && typeof shoppingCart.totalCount === 'function') {
+      if (shoppingCart.totalCount() === 0) {
+        const checkoutContent = document.getElementById("form-container");
+        if (checkoutContent) checkoutContent.remove();
+      }
+    } else if (retries > 0) {
+      setTimeout(() => tryRemoveCheckout(retries - 1), 100); // Retry after 100ms
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    tryRemoveCheckout();
+  });
+</script>
 
 
