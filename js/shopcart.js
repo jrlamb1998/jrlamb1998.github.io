@@ -202,7 +202,7 @@ function displayCart() {
   $('.total-count').html(shoppingCart.totalCount());
   if (shoppingCart.totalCount() === 0) {
     document.getElementsByClassName("cart-buttons")[0].remove();
-    $('.cart-items').html(`<div p="label-text">Looks like your cart is empty :( </p>`);
+    $('.cart-items').html(`<div class="label-text">Looks like your cart is empty :( </div>`);
   } else {
     var cartArray = shoppingCart.listCart();
     var output = `
