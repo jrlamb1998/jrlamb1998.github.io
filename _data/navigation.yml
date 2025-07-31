@@ -3,10 +3,8 @@ main:
     url: /about/
   - title: Shop
     url: /shop/
-  - title: The Hibble Way
-    url: /way/
-  - title: FAQ
-    url: /faq/
+  - title: Careers
+    url: /careers/
   - title: Cart
     url: /cart/
 

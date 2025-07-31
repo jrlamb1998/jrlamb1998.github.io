@@ -88,3 +88,44 @@
   line-height: 1;
   text-align:center;
 }
+
+.hiring-form label {
+  font-family: 'Chewy', sans-serif;
+}
+
+.hiring-form fieldset {
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+}
+
+.hiring-form fieldset legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hiring-form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hiring-form fieldset label input[type="radio"] {
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+label[for="dog"] {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+label:not([for="dog"]) {
+  display: inline-block;
+  margin-right: 1rem; 
+}

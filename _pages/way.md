@@ -1,5 +1,0 @@
----
-permalink: /way/
----
-
-# Woof

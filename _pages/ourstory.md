@@ -37,3 +37,5 @@ Hibble was a joy from the first bite. It quickly became a sensation in Jack and 
 
 Finally, Hibble was ready for the next level: researching late into the night, Jack and Sophie finally purchased Hibblizer 2.0 and set to work creating the food of the future.
 
+The new Hibbilizer came with its own set of challenges. 
+
