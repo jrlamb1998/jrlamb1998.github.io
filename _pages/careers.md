@@ -10,7 +10,7 @@ header:
 ---
 
 <p class="label-text">Hibble is hiring!</p> 
-<p style="font-family: 'Chewy', sans-serif; text-align:center; color:#2E6F40;">  We offer competitive unpaid internships with opportunities for promotion and career development. .</p>
+<p style="font-family: 'Chewy', sans-serif; text-align:center; color:#578e87;">  We offer competitive unpaid internships with opportunities for promotion and career development. .</p>
  
  
 

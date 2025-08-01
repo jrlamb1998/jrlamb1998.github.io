@@ -78,9 +78,30 @@ Food has a dropdown flavor selector menu. Clothing has a clickable color option 
         </div>
         <br />
         <button class="add-to-cart-btn button" style="background-color: #578e87"> Add to Cart </button>
+        <div id="cart-status" class="status-message" style="display:none; color:  #578e87; margin-top: 0.5rem;">
+  Added to cart!
+</div>
       </div>
       </section>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const addToCartBtn = document.querySelector(".add-to-cart-btn");
+    const cartStatus = document.getElementById("cart-status");
+
+    if (addToCartBtn && cartStatus) {
+      addToCartBtn.addEventListener("click", function () {
+        cartStatus.style.display = "block";
+        cartStatus.textContent = "Added to cart!";
+
+        setTimeout(() => {
+          cartStatus.style.display = "none";
+        }, 2000);
+      });
+    }
+  });
+</script>
