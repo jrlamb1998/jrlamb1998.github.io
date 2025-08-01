@@ -8,6 +8,8 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; 
 @import "jekyll-cart"; 
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import 'custom-chewy';
 
 .big-title {
   font-size: 2.5rem;

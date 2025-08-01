@@ -33,16 +33,15 @@ header:
   <label>
   <input type="radio" name="entry.183007061" value="Yes" required> Yes
   </label>
-  <label>
+  
+  <label style="display: inline-block; margin-bottom: 1rem;">
     <input type="radio" name="entry.183007061" value="No"> No
   </label>
-
-
-  <label for="hibbilize" style="margin-top: 1.5rem;">
-    In your own words, what does it mean to Hibbilize and how do you plan to support the Hibblution?
+  
+  <label for="hibbilize" style="display:block; margin-top:.5rem; margin-bottom:0.5rem;">
+    How do you plan to support the Hibblution?
   </label>
-  <textarea id="hibbilize" name="entry.214180489" placeholder="Your answer here" required
-            style="width: 100%; min-height: 150px; padding: 1rem; font-size: 1.1rem; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;"></textarea>
+  <textarea id="hibbilize" name="entry.214180489" placeholder="Your answer here" required style="width: 100%; min-height: 150px; padding: 1rem; font-size: 1.1rem; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;"></textarea>
 
   <button type="submit">Submit</button>
 </form>

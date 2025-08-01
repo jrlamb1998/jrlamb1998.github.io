@@ -1,0 +1,38 @@
+/* Force Chewy font on headers and footer OVERWRITE minimal mistakes*/
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright,
+.page__header {
+  font-family: 'Chewy', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.page__title,
+.nav__title,
+.header {
+  font-family: 'Chewy', sans-serif !important;
+}
+
+.nav__list,
+.nav__list-item,
+.nav__title,
+.site-nav,
+.site-header,
+.greedy-nav {
+  font-family: 'Chewy',  sans-serif !important;
+}
+
+.page__lead,
+.splash .page__lead {
+  font-family:  'Chewy',  sans-serif !important;
+  }
+
+
+.archive__item-excerpt,
+.archive__item-excerpt .ais-Highlight,
+.entry-excerpt,
+.excerpt {
+  font-family: 'Chewy',sans-serif !important;
+}
+
