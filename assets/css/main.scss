@@ -194,6 +194,11 @@ label:not([for="dog"]) {
   background-color: #1d3557;
 }
 
+.btn.remove-item-btn  {
+  font-size: 0.75rem;
+  font-family: sans-serif;
+}
+
 /* Status messages */
 .status-message {
   margin-top: 15px;
